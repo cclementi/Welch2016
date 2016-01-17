@@ -1,0 +1,794 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 3cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+(ignore the text before the first section...)
+\end_layout
+
+\begin_layout Standard
+Hierarchy of Hamiltonians:
+\begin_inset Formula 
+\[
+E(x)=E_{1}(x)+E_{2}(x)+....
+\]
+
+\end_inset
+
+Stationary probability:
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi(x) & \propto & \pi_{1}(x)\times\pi_{2}(x)\times....\\
+\pi_{i}(x) & = & \exp(-\beta E_{i}(x))
+\end{eqnarray*}
+
+\end_inset
+
+Bayesian formulation:
+\begin_inset Formula 
+\[
+\mathbb{P}(\pi_{i,i+1})\propto\mathbb{P}(\pi_{i})\mathbb{P}(\pi_{i+1}\mid Obs)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Example: Two states
+\end_layout
+
+\begin_layout Standard
+Experiment 1: 
+\begin_inset Formula $\pi_{1}\sim(0.5\pm0.3;\:0.5\pm0.3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Experiment 2: 
+\begin_inset Formula $\pi_{2}\sim(0.7\pm0.1;\:0.3\pm0.1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Posterior 12: 
+\begin_inset Formula $\pi_{12}\sim(0.68\pm0.08;\:0.32\pm0.08)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\series bold
+Combination of Exp + Sim
+\end_layout
+
+\begin_layout Enumerate
+We measure 
+\begin_inset Formula $K$
+\end_inset
+
+ thermodynamic quantities (e.g.
+ binding energies, folding energies, expectation of some spectroscopic quantity).
+ Each quantity is affiliated with an uncertainty (mathematically treated
+ as a statistical uncertainty, but especially for ensemble experiments,
+ this will rather be a measure of unreliability of the measurement).
+ 
+\begin_inset Newline newline
+\end_inset
+
+We call the measured values and uncertainties 
+\begin_inset Formula $(f_{1},\,...,\,f_{K})$
+\end_inset
+
+ and 
+\begin_inset Formula $(\Delta f_{1},\,...,\,\Delta f_{K})$
+\end_inset
+
+, respectively.
+\end_layout
+
+\begin_layout Enumerate
+For simplicity, we treat the measurements as iid with a Normal error model.
+ The likelihood of the true values of the measured quantities being 
+\begin_inset Formula $(e_{1},\,...,\,e_{K})$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\[
+\mathbb{P}\left[(e_{1},\,...,\,e_{K})\mid\mathrm{Exp}\right]=\prod_{k}\mathcal{N}(e_{k};\:f_{k},\Delta f_{k})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{N}(x;\:\mu,\,\sigma)$
+\end_inset
+
+ is the Gaussian density in variable 
+\begin_inset Formula $x$
+\end_inset
+
+ with mean 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and standard deviation 
+\begin_inset Formula $\sigma$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\mathcal{N}(x;\:\mu,\,\sigma)\propto\exp\left(-\frac{(x-\mu)^{2}}{2\sigma^{2}}\right)
+\]
+
+\end_inset
+
+It's straightforward to extend this error model if more information is available.
+ For instance, if 
+\begin_inset Formula $(f_{1},\,...,\,f_{K})$
+\end_inset
+
+ are different frequencies or timepoints of a nontrivial spectroscopic measureme
+nt, such as a spectrum, the iid assumption is probably wrong, as it's likely
+ that the different values are cross-correlated.
+ In this case one can make the error model more complex by using a multivariate
+ Gaussian with a nondiagonal covariance matrix.
+ If one knows more about the functional form of the error, it may be useful
+ to replace the Gaussian model by a function that represents the specifics
+ of experimental error.
+\end_layout
+
+\begin_layout Enumerate
+Run Simulations with initial Parameter set 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+.
+ Based on the simulation data alone, and a suitable analysis model, we can
+ compute a posterior distribution
+\begin_inset Formula 
+\[
+\mathbb{P}\left[\pi(\mathbf{x})\mid\mathrm{Sim}\,\epsilon_{0}\right]
+\]
+
+\end_inset
+
+Here 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is a molecular configuration and 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is the equilibrium density of 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+.
+ Computationally, the equilibrium distribution is usually evaluated on bins
+ or discrete states, such that 
+\begin_inset Formula $\pi(\mathbf{x})$
+\end_inset
+
+ is not a function but a vector 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+.
+ Consider two ways of evaluating this distribution:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We just discretize our state space into 
+\begin_inset Formula $N$
+\end_inset
+
+ bins.
+ We subsample our simulation data such that each sample is statistically
+ independent of the previous one (that's a poor model for most simulations!).
+ Then we histogram the data and 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ is the number of bin counts in the 
+\begin_inset Formula $i$
+\end_inset
+
+th bin.
+ The probability density of equilibrium vectors 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+ is given by the multinomial distribution:
+\begin_inset Formula 
+\[
+\mathbb{P}\left[\boldsymbol{\pi}\mid\mathrm{Sim}\,\epsilon_{0}\right]=\prod_{i}\pi_{i}^{n_{i}}
+\]
+
+\end_inset
+
+The maximum likelihood is simply 
+\begin_inset Formula $\pi_{i}=n_{i}/N$
+\end_inset
+
+.
+ It's also clear that this distribution is simple to sample, i.e.
+ we can easily generate samples 
+\begin_inset Formula $\boldsymbol{\pi}_{1},\,\boldsymbol{\pi}_{2},\,...$
+\end_inset
+
+ from the multinomial distribution.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Side note: If we simulate at multiple ensembles (temperatures, biases),
+ we additionally have to multiply the multinomial distributions of all ensembles.
+ The maximum-likelihood solution of that is the WHAM algorithm.
+ We would also sample this as a large multinomial.
+\end_layout
+
+\begin_layout Enumerate
+We discretize our state space into 
+\begin_inset Formula $N$
+\end_inset
+
+ clusters and build a Markov state model at lag time 
+\begin_inset Formula $\tau$
+\end_inset
+
+ on it.
+ For each step 
+\begin_inset Formula $\tau$
+\end_inset
+
+ we count a transition between clusters, and sum the result into count matrix
+ 
+\begin_inset Formula $\mathbf{C}(\tau)$
+\end_inset
+
+, where 
+\begin_inset Formula $c_{ij}(\tau)$
+\end_inset
+
+ is the number of conditionally independent transition counts from 
+\begin_inset Formula $i$
+\end_inset
+
+ to 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ The probability density of Markov state models with transition matrix 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\[
+\mathbb{P}\left[\mathbf{P}\mid\mathrm{Sim}\,\epsilon_{0}\right]=\prod_{i}p_{ij}^{c_{ij}}
+\]
+
+\end_inset
+
+where we have omitted 
+\begin_inset Formula $\tau$
+\end_inset
+
+ for clarity of notation.
+ We have algorithms for computing the maximum likelihood (nonreversible
+ or reversible) for such a model.
+ We can also employ transition matrix sampling algorithms (there are papers
+ on that...
+ to complex to describe here), and thereby sample Markov models 
+\begin_inset Formula $\mathbf{P}_{1},\,\mathbf{P}_{2},\,...$
+\end_inset
+
+.
+ For each of them we compute the equilibrium distribution, and thus get
+ samples 
+\begin_inset Formula $\boldsymbol{\pi}_{1},\,\boldsymbol{\pi}_{2},\,...$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Next we will compute the experimental quantities from the simulation data.
+ First, let's think how to formalize that.
+ Suppose that the true measurement 
+\begin_inset Formula $e_{k}$
+\end_inset
+
+ is an expectation value, i.e.
+\begin_inset Formula 
+\[
+e_{k}=\int_{\mathbf{x}}\mu(\mathbf{x})\,g_{k}(\mathbf{x})\,\mathrm{d}\mathbf{x}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mu(\mathbf{x})$
+\end_inset
+
+ is the true Boltzmann density and 
+\begin_inset Formula $g_{k}$
+\end_inset
+
+ is the accurate function to compute the experimental observable (e.g.
+ a fluorescence).
+ If we measure a free energy, we can express that by defining 
+\begin_inset Formula $e_{k}$
+\end_inset
+
+ as 
+\begin_inset Formula $e_{k}=-kT\ln\int_{\mathbf{x}}\mu(\mathbf{x})\,1_{k}(\mathbf{x})\,\mathrm{d}\mathbf{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $1_{k}$
+\end_inset
+
+ is the function that is 
+\begin_inset Formula $1$
+\end_inset
+
+ on a subset of state space (e.g.
+ the folded states).
+ Etc.
+\end_layout
+
+\begin_layout Enumerate
+Now in order to actually compute the experimental quantities we have to
+ make two approximations: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We usually do not have the true function 
+\begin_inset Formula $g_{k}$
+\end_inset
+
+ but just some decent model of the experimental observable.
+ For example, to compute a FRET efficiency, we can measure the distance
+ and orientation of the dyes (or just the distance of the residues at which
+ the dyes would be attached, if we haven't simulated them), insert together
+ with some bogus Förster radius and effective permittivity into the Förster
+ equation and hope for the best.
+ Let's call our function or proxy to compute the experimental quantity 
+\begin_inset Formula $\tilde{g}_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+We don't have the true Boltzmann density 
+\begin_inset Formula $\mu(\mathbf{x})$
+\end_inset
+
+.
+ We assume that this is sampled in the experiment, but the experiment doesn't
+ tell us 
+\begin_inset Formula $\mu(\mathbf{x})$
+\end_inset
+
+.
+ So we will actually compute our simulation value at a simulation equilibrium
+ vector 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+ that comes from a Markov model or a binned equilibrium model (see above).
+ Our predicted experimental value becomes:
+\begin_inset Formula 
+\[
+\tilde{e}_{k}[\boldsymbol{\pi}]=\sum_{i}\pi_{i}\frac{1}{n_{i}}\sum_{j}\tilde{g}_{k}(\mathbf{x}_{ij})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{x}_{ij}$
+\end_inset
+
+ is the 
+\begin_inset Formula $j$
+\end_inset
+
+th sampled configuration in discrete state 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ is the number of configurations in state 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The inner sum represents the empirical average of the experimental expecation
+ value within discrete state 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The outer sum weights these local expectations to a global expectation
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Compute the maximum likelihood 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+ (e.g.
+ using an MSM), and predict the experimental quantities:
+\begin_inset Formula 
+\[
+\tilde{e}_{1}[\boldsymbol{\pi}],\,...,\,\tilde{e}_{K}[\boldsymbol{\pi}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Next we want to reduce the systematic error, i.e.
+ reduce the error due to poor simulation parameters.
+ First we need a measure of how good we already are.
+ For this, we simply ask our experiment and evaluate the simulation prediction
+ in the light of the experimental density:
+\begin_inset Formula 
+\[
+Q^{0}=\mathbb{P}\left[(\tilde{e}_{1}[\boldsymbol{\pi}],\,...,\,\tilde{e}_{K}[\boldsymbol{\pi}])\mid\mathrm{Exp}\right]
+\]
+
+\end_inset
+
+And we use this as our measure of quality for parameter set 
+\begin_inset Formula $0$
+\end_inset
+
+, 
+\begin_inset Formula $Q^{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Now we propose a change of simulation parameters, reweight the samples 
+\begin_inset Formula $\boldsymbol{\pi}_{l}$
+\end_inset
+
+ (because sampling 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+ can be expensive and has a statistical error itself which is not modeled
+ here, we choose reweighting of a given sample of 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+ over sampling again for every change).
+ Suppose we change parameters infinitesimally 
+\begin_inset Formula $\epsilon_{1}=\epsilon_{0}+\delta\epsilon$
+\end_inset
+
+.
+ This change can be in one dimension, and we can do such a change for every
+ single parameter we have.
+ For such a change, we can reweigh every sample 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ from its previous weight 
+\begin_inset Formula 
+\[
+\mu^{0}(\mathbf{x})=\frac{\pi_{i}^{0}}{n_{i}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $i$
+\end_inset
+
+ is the state that sample 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is located in and 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ is the number of samples in that state, to its new weight:
+\begin_inset Formula 
+\[
+\mu^{1}(\mathbf{x})=\frac{1}{n_{i}\exp(f_{i}-b(\mathbf{x}))}
+\]
+
+\end_inset
+
+(see TRAM paper).
+ We can use
+\begin_inset Formula 
+\[
+\pi_{i}^{0}=\exp(-f_{i})
+\]
+
+\end_inset
+
+and we model the previous free energy density 
+\begin_inset Formula $u^{0}(x)$
+\end_inset
+
+ in terms of the new free energy density 
+\begin_inset Formula $u^{1}(x)$
+\end_inset
+
+ by means of reweighting with bias energy 
+\begin_inset Formula $b$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+u^{0}(x)=u^{1}(x)+b(x)
+\]
+
+\end_inset
+
+and thus:
+\begin_inset Formula 
+\begin{eqnarray*}
+b(x) & = & u^{0}(x)-u^{1}(x)\\
+ & = & \beta H^{0}(x)-\beta H^{1}(x)
+\end{eqnarray*}
+
+\end_inset
+
+such that:
+\begin_inset Formula 
+\[
+\mu_{1}(x)=\frac{\pi_{i}^{0}}{n_{i}}\exp\left[-\beta\Delta H(x)\right]
+\]
+
+\end_inset
+
+with
+\begin_inset Formula 
+\[
+\Delta H(x)=H^{0}(x)-H^{1}(x)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\frac{\pi_{i}^{1}}{\pi_{i}^{0}}=\frac{1}{n_{i}}\sum_{x\in S_{i}}\exp\left[-\beta\Delta H(x)\right]
+\]
+
+\end_inset
+
+is the reweighted equilibrium distribution.
+\end_layout
+
+\begin_layout Enumerate
+Now we make a small step in parameter space, so as to maximize 
+\begin_inset Formula $Q^{1}-Q^{0}$
+\end_inset
+
+.
+ Then go to 3., simulate with the new Parameters and repeat until converged.
+\end_layout
+
+\begin_layout Section
+Full Bayesian formulation (with sampling)
+\end_layout
+
+\begin_layout Enumerate
+Do 1.-5.
+ as above
+\end_layout
+
+\begin_layout Enumerate
+In 5.
+ above we have just have computed a single realization of the quantities
+ 
+\begin_inset Formula $(\tilde{e}_{1},\,...,\,\tilde{e}_{K})[\boldsymbol{\pi}]$
+\end_inset
+
+.
+ But that doesn't yet express that our equilibrium distribution 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+ may not only be systematically wrong, but is also statistically uncertain
+ (we have used a finite - and often small - amount of simulation data to
+ compute it).
+ So we use 3.
+ and compute samples of our equilibrium distribution 
+\begin_inset Formula $\boldsymbol{\pi}_{1},\,\boldsymbol{\pi}_{2},\,...$
+\end_inset
+
+.
+ We insert each of those in 5b, and thus obtain samples
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{e}_{1}[\boldsymbol{\pi}_{1}], & \,\tilde{e}_{1}[\boldsymbol{\pi}_{2}], & \,...\\
+\vdots & \vdots & \vdots\\
+\tilde{e}_{K}[\boldsymbol{\pi}_{1}], & \,\tilde{e}_{K}[\boldsymbol{\pi}_{2}], & \,...
+\end{eqnarray*}
+
+\end_inset
+
+By virtue of these samples we get a simulated probability density of the
+ experimental quantities, i.e.:
+\begin_inset Formula 
+\[
+\mathbb{P}\left[(\tilde{e}_{1},\,...,\,\tilde{e}_{K})\mid\mathrm{Sim}\,\epsilon_{0}\right]
+\]
+
+\end_inset
+
+(Compare that to 2.)
+\end_layout
+
+\begin_layout Enumerate
+Now, we want to compute the joint posterior.
+ In order to be able to do that we must assume that our proxy functions
+ are good enough that our predicted value is really what the experiment
+ would measure, i.e.
+ we set 
+\begin_inset Formula $\tilde{e}=e$
+\end_inset
+
+.
+ The joint posterior is then:
+\begin_inset Formula 
+\[
+\mathbb{P}\left[(e_{1},\,...,\,e_{K})\mid\mathrm{Sim}\,\epsilon_{0},\,\mathrm{Exp}\right]=\mathbb{P}\left[(e_{1},\,...,\,e_{K})\mid\mathrm{Sim},\epsilon_{0}\right]\mathbb{P}\left[(e_{1},\,...,\,e_{K})\mid\mathrm{Exp}\right]
+\]
+
+\end_inset
+
+ok, how do we compute this in practice? To sample the first part we use
+ our computational samples of the equilibrium density, predict the experimental
+ value - as described in 6.
+ We now simply take the product with the experimental distribution by using
+ the experimental distribution as a acceptance density, i.e.: we repeat many
+ times 
+\begin_inset Formula $l$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sample 
+\begin_inset Formula $\boldsymbol{\pi}_{l}$
+\end_inset
+
+ from 
+\begin_inset Formula $\mathbb{P}\left[\boldsymbol{\pi}\mid\mathrm{Sim}\,\epsilon_{0}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $(\tilde{e}_{1}[\boldsymbol{\pi}_{l}],\,...,\,\tilde{e}_{K}[\boldsymbol{\pi}_{l}])$
+\end_inset
+
+ as described in 5.b
+\end_layout
+
+\begin_layout Enumerate
+Accept this sample proportional to probability density 
+\begin_inset Formula $\mathbb{P}\left[(\tilde{e}_{1}[\boldsymbol{\pi}_{l}],\,...,\,\tilde{e}_{K}[\boldsymbol{\pi}_{l}])\mid\mathrm{Exp}\right]$
+\end_inset
+
+ (described in 2.)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Proceed with 6.
+ above (there reweighting part at the end is still missing...)
+\end_layout
+
+\end_body
+\end_document

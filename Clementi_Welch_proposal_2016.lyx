@@ -1,0 +1,931 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+\usepackage{caption}
+\captionsetup{font=footnotesize}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip 0.03cm
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+\noindent
+Problem definition
+\end_layout
+
+\begin_layout Standard
+Combined in diverse cellular assemblies that vary with cell cycle, tissue
+ type and in response to external stimuli, proteins constitute the nanomachines
+ of biology.
+ Proteins don't act alone and they are most often required to interact with
+ each others in order to perform their function.
+ Biological processes are governed by the well-defined organization of proteins
+ into complexes, and understanding the principles regulating protein interaction
+s remains an important endeavor.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Major biological processes such as immunity, metabolism, signaling, gene
+ expression, as well as the building of supramolecular assemblies and molecular
+ machines are mediated through protein interactions.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Substantial advances in experimental key technologies, including super-resolutio
+n microscopy localization techniques, multi-color single molecule FRET spectrosc
+opy, and cryo-electron microscopy, are offering an unprecedented view into
+ the spatial and temporal organization of proteins and larger macromolecular
+ complexes in the cellular environment.
+ This is generating new insights and prompting more challenging questions
+ on the physico/chemical principles underlying complex biological mechanisms.
+ Experiments are still lacking the ability to simultaneously resolve structure
+ and dynamics in a way that would permit a full characterization of the
+ assembly and dynamical mechanisms of large and partly unstructured proteins.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Computer simulations present an attractive complement to experiment.
+ Recent advances in theoretical modeling and high-performance computing
+ allow to simulate the molecular dynamics (MD) of protein systems at atomic-leve
+l detail up to a few 100 
+\begin_inset Formula $\mu$
+\end_inset
+
+s timescale on state-of-the-art computational resources.
+ However, the time- and length-scales required to study the dynamic interplay
+ of protein complexes and their interaction partners in complex biological
+ mechanisms, let alone the efficiency required to explore many mutants and
+ their phenotypes, still go far beyond atomistic MD.
+ Recently proposed cellular dynamics simulations address the spatiotemporal
+ reaction kinetics over significantly longer timescale and larger length-scale.
+ However, in this approach intramolecular resolution is lost: a macromolecule
+ is often represented as a few connected particles, precluding for instance
+ the direct observation of structural dynamics within a protein, or the
+ modeling of intrinsically disordered proteins.
+\end_layout
+
+\begin_layout Standard
+\noindent
+We propose a modeling and computational approach for the characterization
+ of protein-protein interaction and assembly, at a scale that can bridge
+ molecular and cellular studies.
+ The simulation method we propose is computationally efficient due to a
+ coarser-than-atomistic resolution, yet accurate by virtue of being optimized
+ to obey experimentally reproduce thermodynamic and kinetic measurements.
+ This approach will enable us to characterize the dynamics, assembly, and
+ function of large biological complexes, involving intrinsically disordered
+ proteins, large structural transitions, and metastable assemblies.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+[
+\shape italic
+Need to say something about applications...
+\shape default
+]
+\end_layout
+
+\begin_layout Standard
+In the last several years our work has produced important results along
+ the line of research supported by our previous Welch grants.
+ The research proposed for the next three years of support capitalizes on
+ these results.
+ The tools we have developed put us now in a unique position to address
+ the problems presented here.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Methods and method development
+\end_layout
+
+\begin_layout Standard
+\noindent
+Experimental and theoretical approaches to characterize macromolecular dynamics
+ and function have evolved dramatically in the last few decades.
+ However, experiment and computation have co-existed with limited feedback.
+ On one hand simulations can, in principle, resolve details not accessible
+ to experiment, but are based on empirical models and, alone, cannot be
+ quantitatively predictive.
+ On the other hand, a wealth of indirect data on the structure and dynamics
+ of macromolecular complexes is available from thermodynamic and kinetic
+ measurements on parts of the systems of interest, but there is no way to
+ systematically combine these data into a structural model.
+\end_layout
+
+\begin_layout Standard
+\noindent
+A radically different approach is needed to fully exploit the complementary
+ information that can be obtained in theory and experiment and advance significa
+ntly our understanding of the dynamics and function of macromolecular complexes.
+ Our aim is to merge the approximate but high-resolution structural and
+ dynamical information from computational models with the 
+\begin_inset Quotes eld
+\end_inset
+
+exact
+\begin_inset Quotes erd
+\end_inset
+
+ but lower resolution information available from experiments, where there
+ is usually a trade-off between high dynamical resolution and high structural
+ resolution.
+ Our work of the last 15 years has significantly contributed to create such
+ an integrative approach.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "75text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Scheme_of_the_procedure.png
+	lyxscale 50
+	width 100col%
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "2col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantom{xxx}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "s"
+use_parbox 0
+use_makebox 0
+width "20col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Scheme"
+
+\end_inset
+
+
+\lang american
+Scheme of the inverse method to incorporate experimental data into macromolecula
+r simulation.
+ A model is defined (with a set of tunable parameters), and experimental
+ measurements are collected for the system of interest.
+ The values of the model parameters that optimally describe the available
+ experimental data are then automatically determined by our method.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In the past few decades the study of collective/organizing motions at long
+ timescales and system sizes inaccessible to atomistic simulations has been
+ mostly based on coarse-grained models that 
+\begin_inset Quotes eld
+\end_inset
+
+renormalize
+\begin_inset Quotes erd
+\end_inset
+
+ groups of atoms into 
+\begin_inset Quotes eld
+\end_inset
+
+effective
+\begin_inset Quotes erd
+\end_inset
+
+ degrees of freedom.
+ By sacrificing the atomistic details coarse-grained models can explore
+ larger time and length scales, providing a good starting point to identify
+ relevant regions on the vast configurational landscape of protein complexes.
+ However, these simplified models are built with approximations and assumptions
+ that may strongly affect the accuracy of the results.
+ In order to fully exploit the advantages of a coarse-grained protein model
+ without compromising the validity of the simulation, we have proposed an
+ “inverse statistical mechanics” procedure for molecular modeling where
+ average quantities measured experimentally are the starting point for the
+ definition of a model, as opposed to the “direct” approach where models
+ can be used to obtain averages to be compared to experimental data.
+ The idea is illustrated in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Scheme"
+
+\end_inset
+
+.
+ In short, this procedure allows to 
+\begin_inset Quotes eld
+\end_inset
+
+anchor
+\begin_inset Quotes erd
+\end_inset
+
+ a model to available experimental data: it uses experimental data directly
+ to determine the effective parameters of a molecular model, providing a
+ way to test the assumptions lying at the base of the model and to characterize
+ states of the system that may be inaccessible to experiments.
+ In practice, the method performs a sort of 
+\begin_inset Quotes eld
+\end_inset
+
+guided
+\begin_inset Quotes erd
+\end_inset
+
+ search of the parameter space to optimally 
+\begin_inset Quotes eld
+\end_inset
+
+tune
+\begin_inset Quotes erd
+\end_inset
+
+ a given model to reproduce a large set of experimental data.
+ It is also important to note that, if essential physico/chemical elements
+ are missing in the simulation model, such that it is not fully consistent
+ with the experimental data, the procedure to obtain the model parameter
+ does not converge, providing an automatic test for the validity of the
+ assumptions underlying the selected model.
+\end_layout
+
+\begin_layout Standard
+\noindent
+The power of this method has been illustrated for instance on the study
+ of the aggregation of a mutated form of protein S6.
+ It was shown that the mutation of a specific set of residues triggers significa
+nt changes on the configurational landscape of this protein.
+ This study has provided clues on the mechanism adopted by the wild-type
+ form of protein S6 to avoid aggregation, and supports the previously proposed
+ hypothesis that a non-optimal twist between 
+\begin_inset Formula $\beta$
+\end_inset
+
+-strands may be a result of natural evolution to avoid edge-to-edge aggregation
+ between several copies of the same protein.
+ Ongoing work shows that complex experimental observables, such as FRET
+ distributions can also be included in the method.
+\end_layout
+
+\begin_layout Subsubsection*
+Bayesian approach to optimal combination of experiment and simulation
+\end_layout
+
+\begin_layout Standard
+\noindent
+The original formulation of our inverse method involved the application
+ of free energy perturbation theory and a first order Taylor expansion in
+ the parameter space of the selected model's Hamiltonian.
+ We now plan to extend this method by using a Bayesian approach to measure
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+goodness
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Formula $Q$
+\end_inset
+
+, of the model Hamiltonian in reproducing a set of experimental observables
+ (with associated uncertainties), then iteratively change the Hamiltonian
+ to maximize 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ Such a Bayesian approach has two significant advantages: (i) it naturally
+ allows to combine together heterogenous experimental data (e.g., different
+ sets of observables obtained from different experimental methods), and
+ (ii) it associates an uncertainty to the model predictions.
+ 
+\end_layout
+
+\begin_layout Standard
+The approach we propose starts with the definition of a family of models,
+ with a large set of free parameters.
+ In practice, this is done by assuming a geometric representation for the
+ system, and a Hamiltonian function for the interaction energy among the
+ system components.
+ For instance, plausible choices may be a 
+\begin_inset Formula $C_{\alpha}$
+\end_inset
+
+-only or 
+\begin_inset Formula $C_{\alpha}-C_{\beta}$
+\end_inset
+
+ representation for proteins, and pairwise interaction potentials composed
+ by a short-range repulsive core and as sum of multiple Gaussian functions
+ centered at different positions.
+ The relative weights of the Gaussians, as well as the associated means
+ and variances can all be left as free parameters.
+ We indicate the parameter set as 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Assume that experimental measurements for the system of interest are available
+ for a set of observables (e.g.
+ binding energies, stability upon folding, expectation of some spectroscopic
+ quantity).
+ Each quantity is affiliated with an uncertainty.
+ We denote the measured values and uncertainties as 
+\begin_inset Formula $(f_{1},\,...,\,f_{K})$
+\end_inset
+
+ and 
+\begin_inset Formula $(\Delta f_{1},\,...,\,\Delta f_{K})$
+\end_inset
+
+, respectively.
+ For simplicity, we treat the measurements as independent and identically
+ distributed, with a Normal error model
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+It's straightforward to extend this error model if more information is available.
+ For instance, if 
+\begin_inset Formula $(f_{1},\,...,\,f_{K})$
+\end_inset
+
+ are different frequencies or time-points of a nontrivial spectroscopic
+ measurement, such as a spectrum, the different values are likely cross-correlat
+ed.
+ In this case the error model can be made more complex by using a multivariate
+ Gaussian with a non-diagonal covariance matrix.
+ If the functional form of the error is known, it can be used to replace
+ the Gaussian model by a function that represents the specifics of experimental
+ error.
+\end_layout
+
+\end_inset
+
+.
+ With this assumption, the likelihood of the 
+\begin_inset Quotes eld
+\end_inset
+
+true values
+\begin_inset Quotes erd
+\end_inset
+
+ of the measured quantities being 
+\begin_inset Formula $(e_{1},\,...,\,e_{K})$
+\end_inset
+
+ can be expressed as 
+\begin_inset Formula $\mathbb{P}\left[(e_{1},\,...,\,e_{K})\mid\mathrm{Exp}\right]=\prod_{k}\mathcal{N}(e_{k};\:f_{k},\Delta f_{k})$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathcal{N}(x;\:\mu,\,\sigma)\propto\exp\left(-\frac{(x-\mu)^{2}}{2\sigma^{2}}\right)$
+\end_inset
+
+ is the Gaussian density in variable 
+\begin_inset Formula $x$
+\end_inset
+
+ with mean 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and standard deviation 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We want to find the optimal values of the model parameters given the experimenta
+l data, and a quantitative estimate of the 
+\begin_inset Quotes eld
+\end_inset
+
+goodness
+\begin_inset Quotes erd
+\end_inset
+
+ of the model in reproducing the data.
+ We propose to tackle this problem with the following iterative approach:
+\end_layout
+
+\begin_layout Enumerate
+We use an initial ansatz for the parameter values, 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+.
+ We indicate the corresponding model Hamiltonian as 
+\begin_inset Formula $H_{0}(\mathbf{x})$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ indicates a configuration of the system (e.g., the Cartesian coordinates
+ of the 
+\begin_inset Formula $C_{\alpha}$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{\beta}$
+\end_inset
+
+ atoms of the protein(s)).
+ We run molecular dynamics simulations with 
+\begin_inset Formula $H_{0}(\mathbf{x})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Based on the simulation data and a suitable analysis model, we can compute
+ the conditional probability (
+\shape italic
+posterior
+\shape default
+) 
+\begin_inset Formula $\mathbb{P}\left[\pi^{0}(\mathbf{x})\mid\mathrm{Sim},\,\epsilon_{0}\right]$
+\end_inset
+
+ for the equilibrium distribution 
+\begin_inset Formula $\pi^{0}(\mathbf{x})$
+\end_inset
+
+ given the model parameters 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+.
+ Computationally, the equilibrium distribution is usually evaluated on bins
+ or discrete states, such that 
+\begin_inset Formula $\pi(\mathbf{x})$
+\end_inset
+
+ is not a function but a vector 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+.
+ In practice, this distribution can be efficiently evaluated by discretizing
+ the state space into 
+\begin_inset Formula $N$
+\end_inset
+
+ clusters, 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\dots,N$
+\end_inset
+
+ and build a Markov State Model (MSM) on it.
+ Transitions between clusters are counted to define the count matrix 
+\begin_inset Formula $\mathbf{C}(\tau)$
+\end_inset
+
+, where 
+\begin_inset Formula $c_{ij}(\tau)$
+\end_inset
+
+ is the number of conditionally independent transition counts from 
+\begin_inset Formula $i$
+\end_inset
+
+ to 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ The posterior for a MSM with transition matrix 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ can be expressed as 
+\begin_inset Formula $\mathbb{P}\left[\mathbf{P}\mid\mathrm{Sim}\,\epsilon_{0}\right]=\prod_{i}p_{ij}^{c_{ij}}$
+\end_inset
+
+ where 
+\begin_inset Formula $p_{ij}$
+\end_inset
+
+ are the elements of 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+.
+ The maximum likelihood equilibrium distribution 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+ for such a model can be straightforwardly obtained by using available algorithm
+s.
+ Alternatively, we could simply discretize the state space into 
+\begin_inset Formula $N$
+\end_inset
+
+ bins 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\dots,N$
+\end_inset
+
+ (for example, by using properly defined collective variables) and bin the
+ data.
+ We call 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ the number of bin counts in the 
+\begin_inset Formula $i$
+\end_inset
+
+th bin, 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+.
+ The posterior is given by the multinomial distribution 
+\begin_inset Formula $\mathbb{P}\left[\boldsymbol{\pi}\mid\mathrm{Sim,}\,\epsilon_{0}\right]=\prod_{i}\pi_{i}^{n_{i}}$
+\end_inset
+
+ with a maximum likelihood distribution 
+\begin_inset Formula $\pi_{i}=n_{i}/N$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The simulation data are used to estimate the values of the observables for
+ which we have the experimental measurements.
+ We assume here that the measurement 
+\begin_inset Formula $e_{k}$
+\end_inset
+
+ is an expectation value, i.e.
+\begin_inset Formula 
+\[
+e_{k}=\int_{\mathbf{x}}\mu(\mathbf{x})\,g_{k}(\mathbf{x})\,\mathrm{d}\mathbf{x}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mu(\mathbf{x})$
+\end_inset
+
+ is the Boltzmann density and 
+\begin_inset Formula $g_{k}$
+\end_inset
+
+ is the function that computes the value of the experimental observable
+ (e.g.
+ a fluorescence) associated to a configuration 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+.
+ In practice, the expectation value is computed over the simulation equilibrium
+ vector 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+.
+ The Boltzmann weight associated with a specific configuration 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ in state 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ (cluster or bin) is then estimated as 
+\begin_inset Formula $\tilde{\mu}(\mathbf{x})=\frac{\pi_{i}}{n_{i}}$
+\end_inset
+
+ and the predicted experimental value is:
+\begin_inset Formula 
+\[
+\tilde{e}_{k}[\boldsymbol{\pi}]=\sum_{i}\pi_{i}\frac{1}{n_{i}}\sum_{j\in S_{i}}g_{k}(\mathbf{x}_{ij})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{x}_{ij}$
+\end_inset
+
+ is the 
+\begin_inset Formula $j$
+\end_inset
+
+th sampled configuration in discrete state 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The 
+\begin_inset Quotes eld
+\end_inset
+
+goodness
+\begin_inset Quotes erd
+\end_inset
+
+ of the parameters set 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+ can be quantified by evaluating the simulation prediction in the light
+ of the experimental density :
+\begin_inset Formula 
+\[
+Q^{0}=\mathbb{P}\left[(\tilde{e}_{1}[\boldsymbol{\pi^{0}}],\,...,\,\tilde{e}_{K}[\boldsymbol{\pi^{0}}])\mid\mathrm{Exp}\right]=\prod_{k}\mathcal{N}(\tilde{e}_{k};\:f_{k},\Delta f_{k})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+It is easy to show that the equilibrium distribution 
+\begin_inset Formula $\boldsymbol{\pi^{1}}(\mathbf{x})$
+\end_inset
+
+ associated with a new parameter set 
+\begin_inset Formula $\epsilon_{1}$
+\end_inset
+
+ obtained upon an infinitesimal change of the original values, 
+\begin_inset Formula $\epsilon_{1}=\epsilon_{0}+\delta\epsilon$
+\end_inset
+
+ (changing the model Hamiltonian from 
+\begin_inset Formula $H_{0}(x)$
+\end_inset
+
+ to 
+\begin_inset Formula $H_{1}(x)$
+\end_inset
+
+), can be estimated by reweighing as:
+\begin_inset Formula 
+\[
+\pi_{i}^{1}=\frac{\pi_{i}^{0}}{n_{i}}\sum_{x\in S_{i}}\exp\left[-\beta(H_{0}(\mathbf{x})-H_{1}(\mathbf{x}))\right].
+\]
+
+\end_inset
+
+With this reweighing an expression for the goodness function 
+\begin_inset Formula $Q{}^{1}=\mathbb{P}\left[(\tilde{e}_{1}[\boldsymbol{\pi^{1}}],\,...,\,\tilde{e}_{K}[\boldsymbol{\pi^{1}}])\mid\mathrm{Exp}\right]$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $\epsilon_{1}$
+\end_inset
+
+ can be obtained.
+ We then make a step in the parameter space in the direction that maximizes
+ 
+\begin_inset Formula $Q{}^{1}$
+\end_inset
+
+.
+ New simulations are run with the new parameters 
+\begin_inset Formula $\epsilon_{1}$
+\end_inset
+
+ , a new posterior 
+\begin_inset Formula $\mathbb{P}\left[\pi^{1}(\mathbf{x})\mid\mathrm{Sim},\,\epsilon_{1}\right]$
+\end_inset
+
+ is obtained, and the steps above are repeated until convergence.
+\end_layout
+
+\begin_layout Subsection*
+\noindent
+
+\series bold
+Scientific relevance and broader impact
+\end_layout
+
+\begin_layout Standard
+\noindent
+Thanks to the technological and methodological advances of the last few
+ decades, we now know many key molecular players in many fundamental biological
+ processes.
+ However, a comprehensive view of these processes is still lacking.
+ Oftentimes, an abundance of structural, thermodynamical, or kinetic measurement
+s is available at least for parts of the components in the system of interest.
+ The structural information 
+\emph on
+per se
+\emph default
+ is incomplete as the macromolecules involved are often partly disordered
+ and/or need to change configurations to perform their functions.
+ A theoretical/modeling framework able to integrate all the available (pieces
+ of) information for a given cellular process over a multiple range of time-
+ and length-scales is essential to obtain a global and quantitative understandin
+g of the process, but it is at present not available.
+ The proposed project will contribute to create such a modeling approach.
+ We believe it will be able to explain how the different molecular components
+ organize and interact as a function of time and space in performing a cellular
+ function.
+ 
+\end_layout
+
+\end_body
+\end_document
