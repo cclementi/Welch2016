@@ -89,8 +89,6 @@ Problem definition
 Combined in diverse cellular assemblies that vary with cell cycle, tissue
  type and in response to external stimuli, proteins constitute the nanomachines
  of biology.
- Proteins don't act alone and they are most often required to interact with
- each others in order to perform their function.
  Biological processes are governed by the well-defined organization of proteins
  into complexes, and understanding the principles regulating protein interaction
 s remains an important endeavor.
@@ -122,9 +120,10 @@ opy, and cryo-electron microscopy, are offering an unprecedented view into
  complexes in the cellular environment.
  This is generating new insights and prompting more challenging questions
  on the physico/chemical principles underlying complex biological mechanisms.
- Experiments are still lacking the ability to simultaneously resolve structure
- and dynamics in a way that would permit a full characterization of the
- assembly and dynamical mechanisms of large and partly unstructured proteins.
+ However, experiments are still lacking the ability to simultaneously resolve
+ structure and dynamics in a way that would permit a full characterization
+ of the assembly and dynamical mechanisms of large and partly unstructured
+ proteins.
  
 \end_layout
 
@@ -153,8 +152,8 @@ s timescale on state-of-the-art computational resources.
 \begin_layout Standard
 \noindent
 We propose a modeling and computational approach for the characterization
- of protein-protein interaction and assembly, at a scale that can bridge
- molecular and cellular studies.
+ of protein interaction and assembly, at a scale that can bridge molecular
+ and cellular studies.
  The simulation method we propose is computationally efficient due to a
  coarser-than-atomistic resolution, yet accurate by virtue of being optimized
  to obey experimentally reproduce thermodynamic and kinetic measurements.
@@ -372,9 +371,9 @@ effective
  In order to fully exploit the advantages of a coarse-grained protein model
  without compromising the validity of the simulation, we have proposed an
  “inverse statistical mechanics” procedure for molecular modeling where
- average quantities measured experimentally are the starting point for the
- definition of a model, as opposed to the “direct” approach where models
- can be used to obtain averages to be compared to experimental data.
+ experimentally measured quantities are the starting point for the definition
+ of a model, as opposed to the “direct” approach where models can be used
+ to obtain averages to be compared to experimental data.
  The idea is illustrated in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -395,33 +394,7 @@ anchor
  to determine the effective parameters of a molecular model, providing a
  way to test the assumptions lying at the base of the model and to characterize
  states of the system that may be inaccessible to experiments.
- In practice, the method performs a sort of 
-\begin_inset Quotes eld
-\end_inset
-
-guided
-\begin_inset Quotes erd
-\end_inset
-
- search of the parameter space to optimally 
-\begin_inset Quotes eld
-\end_inset
-
-tune
-\begin_inset Quotes erd
-\end_inset
-
- a given model to reproduce a large set of experimental data.
- It is also important to note that, if essential physico/chemical elements
- are missing in the simulation model, such that it is not fully consistent
- with the experimental data, the procedure to obtain the model parameter
- does not converge, providing an automatic test for the validity of the
- assumptions underlying the selected model.
-\end_layout
-
-\begin_layout Standard
-\noindent
-The power of this method has been illustrated for instance on the study
+ The power of this method has been illustrated for instance on the study
  of the aggregation of a mutated form of protein S6.
  It was shown that the mutation of a specific set of residues triggers significa
 nt changes on the configurational landscape of this protein.
