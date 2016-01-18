@@ -1,0 +1,1495 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%\usepackage{fancyhdr}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+\usepackage[compact]{titlesec}
+\usepackage{enumitem}
+%\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+%\setlist{nolistsep}
+\usepackage{caption}
+\captionsetup{font=footnotesize}
+\usepackage{cite}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip 0.03cm
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes true
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\author 880794617 "Frank Noe" 
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+\noindent
+Problem definition
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 880794617 1453152963
+Combined in diverse cellular assemblies that vary with cell cycle, tissue
+ type and in response to external stimuli, p
+\change_inserted 880794617 1453152963
+P
+\change_unchanged
+roteins 
+\change_deleted 880794617 1453153007
+constitute
+\change_inserted 880794617 1453153007
+are
+\change_unchanged
+ the nanomachines of 
+\change_inserted 880794617 1453153010
+the cell
+\change_deleted 880794617 1453153011
+biology
+\change_inserted 880794617 1453153012
+ that drive and regulate virtually all processes of life
+\change_unchanged
+.
+ 
+\change_deleted 880794617 1453153088
+Substantial advances in experimental key technologies (including super-resolutio
+n microscopy localization techniques
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hell1153"
+
+\end_inset
+
+, multi-color single molecule FRET spectroscopy
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Block2007"
+
+\end_inset
+
+, and cryo-electron microscopy
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ohi2015"
+
+\end_inset
+
+), and t
+\change_inserted 880794617 1453153088
+T
+\change_unchanged
+he advent of genomics
+\change_inserted 880794617 1453153097
+,
+\change_deleted 880794617 1453153098
+ and
+\change_unchanged
+ proteomics
+\change_inserted 880794617 1453153114
+ and increasingly cheap high-throughput biochemical techniques
+\change_deleted 880794617 1453153116
+,
+\change_unchanged
+ have provided 
+\change_deleted 880794617 1453153032
+comprehensive
+\change_inserted 880794617 1453153032
+vast
+\change_unchanged
+ information on the different proteins available in a given cell, and a
+ wealth of quantitative (thermodynamic or kinetic) data on specific protein
+\change_inserted 880794617 1453153128
+-protein
+\change_unchanged
+ interactions.
+ 
+\change_inserted 880794617 1453153200
+Thanks to breakthroughs in experimental key technologies (including super-resolu
+tion microscopy localization techniques
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hell1153"
+
+\end_inset
+
+[
+\series bold
+also cite Moerner and Betzig
+\series default
+], multi-color single molecule FRET spectroscopy
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Block2007"
+
+\end_inset
+
+, and cryo-electron microscopy
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ohi2015"
+
+\end_inset
+
+), 
+\change_deleted 880794617 1453153201
+I
+\change_inserted 880794617 1453153201
+i
+\change_unchanged
+t is becoming increasingly clear that many, if not most, biological processes
+ are managed by spatiotemporally orchestrated protein superstructures such
+ as assemblies or scaffolds
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Alberts1998291"
+
+\end_inset
+
+
+\change_inserted 880794617 1453153738
+ (
+\series bold
+these are good to cite: http://www.pnas.org/content/100/21/12123.full and http://sc
+ience.sciencemag.org/content/278/5346/2075.short or http://www.nature.com/nrm/journal
+/v7/n1/abs/nrm1784.html
+\series default
+)
+\change_unchanged
+.
+ However, 
+\change_inserted 880794617 1453153766
+any single 
+\change_unchanged
+experiment
+\change_deleted 880794617 1453153757
+s
+\change_unchanged
+ provide
+\change_inserted 880794617 1453153768
+s
+\change_unchanged
+ only a glimpse of the complex machinery
+\change_inserted 880794617 1453153796
+ of the cell.
+ How can we assemble these pieces of information to a 
+\change_deleted 880794617 1453153803
+ that we need to understand in a
+\change_unchanged
+ quantitative, mechanistic and spatiotemporal 
+\change_deleted 880794617 1453153810
+manner
+\change_inserted 880794617 1453153815
+model that allows us
+\change_deleted 880794617 1453153818
+ in order to be able to
+\change_unchanged
+ comprehend and 
+\change_inserted 880794617 1453153822
+ultimately 
+\change_unchanged
+control biological function
+\change_deleted 880794617 1453153823
+.
+\change_inserted 880794617 1453153823
+?
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Computer simulations present an attractive complement to experiment.
+ Recent advances in theoretical modeling and high-performance computing
+ allow to simulate atomic-level molecular dynamics (MD) of proteins up to
+ a few 100 
+\begin_inset Formula $\mu$
+\end_inset
+
+s timescale
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Shaw341"
+
+\end_inset
+
+.
+ Unfortunately, the time- and length-scales required to study the dynamic
+ interplay of protein complexes and their interaction partners in complex
+ biological mechanisms, let alone the efficiency required to explore many
+ mutants and their phenotypes, still go far beyond atomistic MD.
+ Recently proposed cellular dynamics simulations
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schoneberg2014"
+
+\end_inset
+
+ address the spatiotemporal reaction kinetics over significantly longer
+ timescale and larger length-scale but sacrifice intramolecular resolution,
+ precluding the direct observation of structural dynamics within a protein,
+ or the modeling of intrinsically disordered proteins.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+We propose a modeling and computational approach for the characterization
+ of protein interaction and assembly, at a scale that can bridge molecular
+ and cellular studies.
+ The simulation method we propose is computationally efficient due to a
+ coarser-than-atomistic resolution, yet accurate by virtue of being optimized
+ to obey experimentally reproduce thermodynamic and kinetic measurements.
+ This approach will enable us to characterize the dynamics, assembly, and
+ function of large biological complexes, involving intrinsically disordered
+ proteins, large structural transitions, and metastable assemblies.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In the last several years our work has produced important results along
+ the line of research supported by our previous Welch grants (e.g.,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Matysiak:2006bb,Matysiak:2008hj,DasMatysiakClementiPNAS2005,Clementi:2008ci,PretoClementi_PCCP14_AdaptiveSampling,rohrdanz2011determination,Zheng:2011bf,Zheng:2011ir,Zheng:2013cq"
+
+\end_inset
+
+).
+ The tools we have developed put us now in a unique position to address
+ the problems presented here.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Biological applications
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename SNARE.png
+	lyxscale 90
+	width 90col%
+	clip
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SNARE"
+
+\end_inset
+
+Crystal structure of of Ca
+\begin_inset Formula $^{2+}$
+\end_inset
+
+-bound complex between synaptotagmin-1 (Syt1) and the neuronal SNARE complex.
+ The structure reveals several interfaces.
+ However, the Syt1-SNARE complex is highly dynamical and it is likely that
+ multiple other functionally relevant interactions between these proteins
+ exist in different stages of membrane fusion and neurotransmitter release.
+ Figure adapted from
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SNARE"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Although the space limitation of this proposal does not allow a detailed
+ discussion, we plan to apply our approach to a set of specific systems
+ of biological relevance, in collaboration with experimental groups.
+ We are particularly interested in building a quantitative modeling of protein
+ assemblies at the core of the synaptic exocytic mechanism, starting from
+ the SNARE complex and its interaction partners (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SNARE"
+
+\end_inset
+
+).
+ While the core SNARE complex is well established, the understanding of
+ interactions with associated proteins, how they co-assemble and which structura
+l and kinetic intermediates they form is still in its infancy.
+ These questions are biologically extremely relevant for the understanding
+ of the membrane fusion machinery and neuronal signaling.
+ A large amount of experimental evidence is available on structure, function,
+ thermodynamics and kinetics of the exocytic machinery and its constituent
+ proteins.
+ However, most quantitative experiments are done 
+\emph on
+in vitro
+\emph default
+ on fragments or parts of the complex protein machinery.
+ Many individual protein interactions are weak (dissociation constants in
+ the millimolar range), and the architecture of the assemblies can dynamically
+ rearrange and repack depending on the state of the exocytic machinery.
+ These features make a mechanistic characterization (i.e.
+ understanding which supramolecular structures exist and how they dynamically
+ interconvert during exocytic function) intrinsically difficult.
+ In order to compose the disconnected pieces of evidence into a coherent
+ model that describes the dynamical interaction of the contributing proteins,
+ a rigorous data integration method is needed.
+ We believe that our contribution will provide a significant step forward
+ in this direction.
+ The simulation model proposed here will be able to test experimental hypotheses.
+ Conversely, experimental data will directly feed into the model to generate
+ a positive feedback loop.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+We aim to produce a quantitative model of the involved protein species,
+ and make predictions for specific intermediate structures, their relative
+ stability, and rates of interconversion.
+ An effort will be made to predict the energy stored in these complexes,
+ thus providing clues on the catalytic effect of SNAREs and its binding
+ proteins for synaptic vesicle fusion.
+ A set of mutations will be suggested that could affect the stability and
+ kinetics of such states, and therefore of the overall exocytosis process.
+ These predictions will be directly tested by 
+\emph on
+in vitro
+\emph default
+ and 
+\emph on
+in vivo
+\emph default
+: In addition to collecting published structural, thermodynamic, and kinetic
+ data on the proteins involved (e.g.
+ ITC, SPR, FRET), we will collaborate closely with Prof.
+ James McNew at Rice University, and Prof.
+ Jose Rizo-Rey at the University of Texas Southwestern Medical Center in
+ Dallas to obtain unpublished data when necessary.
+\end_layout
+
+\begin_layout Subsection*
+Background and previous work 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Despite significant advances, experiment and computation have co-existed
+ with limited feedback.
+ On one hand simulations can, in principle, resolve details not accessible
+ to experiment, but are based on empirical models and, alone, cannot be
+ quantitatively predictive.
+ On the other hand, a wealth of indirect data on the structure and dynamics
+ of macromolecular complexes is available from thermodynamic and kinetic
+ measurements on parts of the systems of interest, but there is no way to
+ systematically combine these data into a structural and dynamical model.
+\end_layout
+
+\begin_layout Standard
+\noindent
+A radically different approach is needed to fully exploit the complementary
+ information that can be obtained in theory and experiment and advance significa
+ntly our understanding of the dynamics and function of macromolecular complexes.
+ Our aim is to merge the approximate but high-resolution structural and
+ dynamical information from computational models with the 
+\begin_inset Quotes eld
+\end_inset
+
+exact
+\begin_inset Quotes erd
+\end_inset
+
+ but lower resolution information available from experiments, where there
+ is usually a trade-off between high dynamical resolution and high structural
+ resolution.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename MatysiakJMB2006.png
+	lyxscale 50
+	width 100col%
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "4col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantom{xxx}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "34col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:S6"
+
+\end_inset
+
+Predicted aggregated states of a mutated form of the ribosomal S6 protein
+ (S6
+\begin_inset Formula $_{Alz}$
+\end_inset
+
+), as a function of the average fraction of contacts formed, and the rmsd
+ from the experimental crystal structure.
+ Red dots correspond to ordered oligomeric structures, black dots to 
+\begin_inset Quotes eld
+\end_inset
+
+domain swapped
+\begin_inset Quotes erd
+\end_inset
+
+ structures, and the blue ones to amyloid-like structures.
+ Different shades are used to indicate different energies.
+ Representatives for each state are shown.
+ Adapted from ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In the past few decades the study of collective/organizing motions at long
+ timescales and system sizes inaccessible to atomistic simulations has been
+ mostly based on coarse-grained models that 
+\change_deleted 880794617 1453137285
+
+\begin_inset Quotes eld
+\end_inset
+
+renormalize
+\begin_inset Quotes erd
+\end_inset
+
+
+\change_inserted 880794617 1453137285
+combine
+\change_unchanged
+ groups of atoms into 
+\begin_inset Quotes eld
+\end_inset
+
+effective
+\begin_inset Quotes erd
+\end_inset
+
+ degrees of freedom in order to explore larger time and length scales.
+ Our work of the last 15 years has significantly contributed to this development.
+ Although 
+\change_inserted 880794617 1453137279
+of great practical
+\change_deleted 880794617 1453137280
+very
+\change_unchanged
+ valu
+\change_inserted 880794617 1453137282
+e
+\change_deleted 880794617 1453137283
+able
+\change_unchanged
+, these simplified models 
+\change_deleted 880794617 1453137318
+are built with
+\change_inserted 880794617 1453137319
+contain
+\change_unchanged
+ approximations that may strongly affect their accuracy.
+ In order to 
+\change_inserted 880794617 1453137432
+exploit the computational efficiency
+\change_deleted 880794617 1453137369
+fully exploit the advantages
+\change_unchanged
+ of a coarse-grained protein model without 
+\change_inserted 880794617 1453137446
+giving up accuracy
+\change_deleted 880794617 1453137452
+compromising the validity of the simulation
+\change_unchanged
+, 
+\change_inserted 880794617 1453137498
+we have proposed an 
+\begin_inset Quotes eld
+\end_inset
+
+inverse statistical mechanics
+\begin_inset Quotes erd
+\end_inset
+
+ approach 
+\change_unchanged
+with the support of the Welch Foundation
+\change_inserted 880794617 1453137546
+.
+ This approach
+\change_deleted 880794617 1453137565
+, we have previously proposed an “inverse statistical mechanics” procedure
+ for
+\change_inserted 880794617 1453137570
+ defines a
+\change_unchanged
+ molecular model
+\change_inserted 880794617 1453137572
+s
+\change_deleted 880794617 1453137573
+ing
+\change_unchanged
+ 
+\change_inserted 880794617 1453137612
+with the constraint to be consistent with
+\change_deleted 880794617 1453137613
+where
+\change_unchanged
+ experimentally measured quantities
+\change_inserted 880794617 1453137620
+, 
+\change_deleted 880794617 1453137625
+ are the starting point for the definition of a model
+\change_unchanged
+, as opposed to the “direct” approach where models 
+\change_inserted 880794617 1453137644
+make blind predictions of
+\change_deleted 880794617 1453137648
+can be used to obtain averages to be compared to
+\change_unchanged
+ experimental data.
+ The power of this method was illustrated on the study of the aggregation
+ of a mutated form of protein S6 (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:S6"
+
+\end_inset
+
+).
+ It was shown that the mutation of a specific set of residues triggers significa
+nt changes on the configurational landscape of this protein, providing clues
+ on the mechanism adopted by the wild-type to avoid aggregation.
+\end_layout
+
+\begin_layout Subsection*
+New approach: Bayesian inference to combine experiment and simulation
+\end_layout
+
+\begin_layout Standard
+\noindent
+The original formulation of our method involved the application of free
+ energy perturbation theory and a first order Taylor expansion in the parameter
+ space of the model Hamiltonian.
+ Here we propose a much more powerful strategy based on Bayesian inference.
+ The idea is to measure the 
+\begin_inset Quotes eld
+\end_inset
+
+goodness
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Formula $Q$
+\end_inset
+
+, of the model Hamiltonian in reproducing a set of experimental observables,
+ 
+\change_inserted 880794617 1453143453
+and 
+\change_deleted 880794617 1453143473
+then 
+\change_inserted 880794617 1453143454
+to 
+\change_unchanged
+iteratively improve the Hamiltonian to maximize 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ This new approach has three significant advantages: (i) it naturally allows
+ to use heterogenous experimental data (e.g., different observables obtained
+ from different experimental methods), (ii) it a
+\change_inserted 880794617 1453143500
+llows the statistical
+\change_deleted 880794617 1453143502
+ssociates an
+\change_unchanged
+ uncertainty 
+\change_inserted 880794617 1453143516
+involved in finite simulation data to be incorporated
+\change_deleted 880794617 1453143519
+to the model predictions
+\change_unchanged
+, and (iii) it allows 
+\change_deleted 880794617 1453143540
+to quantify
+\change_unchanged
+ the 
+\change_inserted 880794617 1453143543
+accuracy
+\change_deleted 880794617 1453143544
+performance
+\change_unchanged
+ of a model
+\change_inserted 880794617 1453143550
+ to be quantified
+\change_unchanged
+, providing an 
+\change_inserted 880794617 1453143564
+objective
+\change_deleted 880794617 1453143566
+automatic
+\change_unchanged
+ test for the validity of the physicochemical assumptions underlying the
+ selected model.
+\change_inserted 880794617 1453143818
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 880794617 1453145219
+First, the functional form of the Hamiltonian used to model the molecular
+ system of interest is defined.
+ Typically, such a Hamiltonian contains a sum of interaction parameters
+ of the particles used to represent the system, e.g., 
+\begin_inset Formula $C_{\alpha}$
+\end_inset
+
+-only or 
+\begin_inset Formula $C_{\alpha}-C_{\beta}$
+\end_inset
+
+ are used for a simple coarse-grained represenations.
+ These energy terms contain parameters, such as force constants, bond lenghts,
+ effective charges, Lennard-Jones parameters or others.
+ We call the set of parameters 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ and will initially set them to some (generally poor) guess 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+.
+ We will then conduct MD simulations at this parameter set 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+.
+ Due to the simplicity of the Hamiltonian, these simulations can usually
+ sample the phase space defined by 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+ quite excessively, even for rather large proteins and protein complexes.
+ Subsequently, we compute the experimental observables as predicted by the
+ computer simulation, compare to the true experimental observation and rank
+ our result by 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ In the last step, we will change the parameter set, 
+\begin_inset Formula $\epsilon_{0}\rightarrow\epsilon_{1}$
+\end_inset
+
+, and simulate again.
+ This loop is repeated until the simulation is consistent with the experimental
+ observation.
+ At this point, the simulation can be considered a molecular model that
+ is accurate in the light of the available experimental data and can then
+ be analyzed, e.g.
+ in order to understand the structural mechanisms in detail.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\change_inserted 880794617 1453154860
+We will now sketch an approach to iteratively optimize the parameters 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ to achieve consistence with experimentally measured quantities.
+ In the interest of brevity we will limit the present summary to a simple
+ case: (1) While we will work out solutions for arbitrary combinations of
+ thermodynamic and kinetic measurements, we suppose here that we are given
+ a set of 
+\begin_inset Formula $K$
+\end_inset
+
+ thermodynamic measurements 
+\begin_inset Formula $(f_{1},\,...,\,f_{K})$
+\end_inset
+
+ - such as binding energies, stability upon folding, expectation of some
+ spectroscopic quantity - with measurement uncertainties 
+\begin_inset Formula $(\Delta f_{1},\,...,\,\Delta f_{K})$
+\end_inset
+
+.
+ (2) 
+\change_unchanged
+We 
+\change_deleted 880794617 1453143609
+are
+\change_inserted 880794617 1453154625
+will
+\change_unchanged
+ 
+\change_inserted 880794617 1453154625
+develop
+\change_deleted 880794617 1453143612
+working
+\change_unchanged
+ 
+\change_inserted 880794617 1453154625
+a full
+\change_deleted 880794617 1453143616
+on a rigorous
+\change_unchanged
+ Bayesian formulation that takes into account the statistical uncertainties
+ of both experiment and simulation
+\change_inserted 880794617 1453154875
+, we will only
+\change_deleted 880794617 1453154878
+ and can sample a distribution of different solutions rather than returning
+ the optimal realization of the model.
+ 
+\change_inserted 880794617 1453155090
+ sketch the maximum likelihood solution here.
+ The set of optimal parameters is then found by the following iterative
+ approach: 
+\change_deleted 880794617 1453155065
+Here, because of space limitation, we convey the general ideas by presenting
+ a simplified version based on the maximum likelihood criterion.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 880794617 1453155065
+The proposed method starts with the definition of a family of models, with
+ a large set of free parameters, 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ This is done by assuming a geometric representation for the system, e.g.,
+ 
+\begin_inset Formula $C_{\alpha}$
+\end_inset
+
+-only or 
+\begin_inset Formula $C_{\alpha}-C_{\beta}$
+\end_inset
+
+ representation for proteins, and a Hamiltonian function for the interaction
+ energy among the system components, e.g., pairwise interaction potentials
+ composed by a short-range repulsive core and a sum of multiple Gaussian
+ functions centered at different positions.
+ The relative weights of the Gaussians, as well as the associated means
+ and variances can all be left as free parameters.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 880794617 1453154914
+Assume that experimental measurements are available for a set of observables
+ (e.g.
+ binding energies, stability upon folding, expectation of some spectroscopic
+ quantity).
+ We denote the measured values and associated uncertainties as 
+\begin_inset Formula $(f_{1},\,...,\,f_{K})$
+\end_inset
+
+ and 
+\begin_inset Formula $(\Delta f_{1},\,...,\,\Delta f_{K})$
+\end_inset
+
+, respectively.
+ We treat the measurements as independent and identically distributed, with
+ a Normal error model (it's straightforward to extend the error model if
+ more information is available).
+ The likelihood of the 
+\begin_inset Quotes eld
+\end_inset
+
+true values
+\begin_inset Quotes erd
+\end_inset
+
+ of the measured quantities being 
+\begin_inset Formula $(e_{1},\,...,\,e_{K})$
+\end_inset
+
+ can be expressed as 
+\begin_inset Formula $\mathbb{P}\left[(e_{1},\,...,\,e_{K})\mid\mathrm{Exp}\right]=\prod_{k}\mathcal{N}(e_{k};\:f_{k},\Delta f_{k})$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathcal{N}(x;\:\mu,\,\sigma)$
+\end_inset
+
+ is the Gaussian density in variable 
+\begin_inset Formula $x$
+\end_inset
+
+ with mean 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and standard deviation 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 880794617 1453154914
+We want to find the optimal values of the model parameters given the experimenta
+l data, and a quantitative estimate of the 
+\begin_inset Quotes eld
+\end_inset
+
+goodness
+\begin_inset Quotes erd
+\end_inset
+
+ of the model in reproducing the data.
+ We propose to tackle this problem with the following iterative approach:
+\change_inserted 880794617 1453155139
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 880794617 1453155188
+[
+\series bold
+Not sure if we should use an index for the iteration or not.
+ Now I've tried to mostly avoid it, but perhaps it's better to do it always
+ or never.
+ And maybe always superscript (easier because not clashes with other indexes)
+ or always subscript.
+\series default
+]
+\change_unchanged
+
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted 880794617 1453152097
+The initial 
+\change_deleted 880794617 1453152094
+We use an initial ansatz for the 
+\change_unchanged
+parameter values, 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+
+\change_inserted 880794617 1453152106
+, defines a 
+\change_deleted 880794617 1453152109
+.
+ We indicate the corresponding
+\change_unchanged
+ model Hamiltonian 
+\change_deleted 880794617 1453152112
+as 
+\change_unchanged
+
+\begin_inset Formula $H_{0}(\mathbf{x})$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ indicates a configuration of the system (e.g., the Cartesian coordinates
+ of the 
+\begin_inset Formula $C_{\alpha}$
+\end_inset
+
+ 
+\change_deleted 880794617 1453152150
+and 
+\begin_inset Formula $C_{\beta}$
+\end_inset
+
+ 
+\change_unchanged
+atoms of the protein
+\change_inserted 880794617 1453152140
+ system
+\change_deleted 880794617 1453152141
+(s)
+\change_unchanged
+).
+ We run molecular dynamics simulations with 
+\begin_inset Formula $H_{0}(\mathbf{x})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+We compute the maximum likelihood equilibrium distribution 
+\begin_inset Formula $\pi(\mathbf{x})$
+\end_inset
+
+ for the model, as a function of the parameters 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+.
+ Computationally, the equilibrium distribution is usually evaluated on discrete
+ states, such that 
+\begin_inset Formula $\pi(\mathbf{x})$
+\end_inset
+
+ is not a function but a vector 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+.
+ One practical approach is to discretize the state space into 
+\begin_inset Formula $N$
+\end_inset
+
+ clusters, 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\dots,N$
+\end_inset
+
+
+\change_inserted 880794617 1453152194
+,
+\change_unchanged
+ 
+\change_deleted 880794617 1453152195
+and 
+\change_inserted 880794617 1453152228
+to estimate
+\change_deleted 880794617 1453152199
+build
+\change_unchanged
+ a 
+\change_inserted 880794617 1453152205
+maximum-likelihood 
+\change_unchanged
+Markov State Model (MSM) on it
+\change_inserted 880794617 1453152230
+, and to compute its
+\change_deleted 880794617 1453152214
+.
+ The maximum likelihood
+\change_unchanged
+ equilibrium distribution 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+
+\change_inserted 880794617 1453152216
+.
+
+\change_deleted 880794617 1453152220
+ for a MSM can be straightforwardly obtained by using available algorithms.
+
+\change_unchanged
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\change_deleted 880794617 1453152348
+The
+\change_inserted 880794617 1453152445
+For each simulated configuration 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+, we compute the experimental observable 
+\begin_inset Formula $g_{k}(\mathbf{x})$
+\end_inset
+
+,
+\change_unchanged
+ 
+\change_inserted 880794617 1453152504
+e.g.
+ a fluorescence.
+ 
+\change_deleted 880794617 1453152551
+simulation data are used to estimate the values of the observables for which
+ we have the experimental measurements.
+ We assume here that
+\change_inserted 880794617 1453152551
+If
+\change_unchanged
+ the measurement 
+\begin_inset Formula $e_{k}$
+\end_inset
+
+ is an ensemble average
+\change_inserted 880794617 1453152569
+ of that observable, it can be
+\change_deleted 880794617 1453152572
+.
+ Given the equilibrium distribution vector 
+\begin_inset Formula $\boldsymbol{\pi}$
+\end_inset
+
+, the ensemble average can be
+\change_unchanged
+ obtained as 
+\begin_inset Formula $e_{k}[\boldsymbol{\pi}]=\sum_{i}\frac{\pi_{i}}{n_{i}}\sum_{j\in S_{i}}g_{k}(\mathbf{x}_{ij})$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathbf{x}_{ij}$
+\end_inset
+
+ is the 
+\begin_inset Formula $j$
+\end_inset
+
+th sampled configuration in discrete state 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ is the number of samples in 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+
+\change_deleted 880794617 1453152620
+, and 
+\begin_inset Formula $g_{k}$
+\end_inset
+
+ is the function that computes the value of the experimental observable
+ (e.g.
+ a fluorescence) associated to a configuration 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+
+\change_unchanged
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The 
+\begin_inset Quotes eld
+\end_inset
+
+goodness
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ of the 
+\change_inserted 880794617 1453152818
+current 
+\change_unchanged
+parameters set 
+\change_deleted 880794617 1453152821
+
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+ 
+\change_unchanged
+can be quantified by evaluating the probability of the simulation prediction
+ in the light of the experimental density
+\change_deleted 880794617 1453152664
+:
+\change_inserted 880794617 1453152739
+.
+ If we treat the measurements as statistically independent and normally
+ distributed (it's straightforward to use more sophisticated error models),
+ this density is given as: 
+\change_unchanged
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $Q=\mathbb{P}\left[(e_{1}[\boldsymbol{\pi}],\,...,\,e_{K}[\boldsymbol{\pi}])\mid\mathrm{Exp}\right]=\prod_{k}\mathcal{N}(e_{k}[\boldsymbol{\pi}];\:f_{k},\Delta f_{k})$
+\end_inset
+
+.
+\change_inserted 880794617 1453152766
+
+\begin_inset Newline newline
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{N}(x;\:\mu,\,\sigma)$
+\end_inset
+
+ is the Gaussian density in variable 
+\begin_inset Formula $x$
+\end_inset
+
+ with mean 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and standard deviation 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Enumerate
+It 
+\change_deleted 880794617 1453152299
+is easy to
+\change_inserted 880794617 1453152300
+can be
+\change_unchanged
+ show
+\change_inserted 880794617 1453152296
+n
+\change_unchanged
+ that the equilibrium distribution 
+\begin_inset Formula $\boldsymbol{\pi^{(1)}}(\mathbf{x})$
+\end_inset
+
+ associated with a new parameter set 
+\begin_inset Formula $\epsilon_{1}=\epsilon_{0}+\delta\epsilon$
+\end_inset
+
+ can be estimated by reweighing as: 
+\begin_inset Formula $\pi_{i}^{(1)}=\frac{\pi_{i}^{(0)}}{n_{i}}\sum_{x\in S_{i}}\exp\left[-\beta(H_{0}(\mathbf{x})-H_{1}(\mathbf{x}))\right]$
+\end_inset
+
+.
+ The reweighing allows to obtain an expression for 
+\begin_inset Formula $Q{}^{(1)}=\mathbb{P}\left[(e_{1}[\boldsymbol{\pi^{(1)}}],\,...,\,e_{K}[\boldsymbol{\pi^{(1)}}])\mid\mathrm{Exp}\right]$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $\epsilon_{1}$
+\end_inset
+
+.
+ We then make a step in the parameter space in the direction that maximizes
+ 
+\begin_inset Formula $Q{}^{(1)}$
+\end_inset
+
+.
+ New simulations are run with the new parameters 
+\begin_inset Formula $\epsilon_{1}$
+\end_inset
+
+, a new maximum likelihood equilibrium distribution 
+\begin_inset Formula $\pi^{1}(\mathbf{x})$
+\end_inset
+
+ is obtained, and the steps above are repeated until convergence.
+\end_layout
+
+\begin_layout Subsection*
+\noindent
+
+\series bold
+Scientific relevance and broader impact
+\end_layout
+
+\begin_layout Standard
+\noindent
+Thanks to the technological and methodological advances of the last few
+ decades, we now know many key molecular players in many fundamental biological
+ processes.
+ However, a comprehensive view of these processes is still lacking.
+ Oftentimes, an abundance of structural, thermodynamical, or kinetic measurement
+s is available at least for parts of the components in the system of interest.
+ The structural information 
+\emph on
+per se
+\emph default
+ is incomplete as the macromolecules involved are often partly disordered
+ and/or need to change configurations to perform their functions.
+ A theoretical/modeling framework able to integrate all the available (pieces
+ of) information for a given cellular process over a multiple range of time-
+ and length-scales is essential to obtain a global and quantitative understandin
+g of the process.
+ The proposed project will contribute to create such a modeling approach
+\change_inserted 880794617 1453155330
+ that may serve as a keystone to integrate vast amounts of biochemical data
+ into quantitative, mechanistic and comprehensible models
+\change_unchanged
+.
+ 
+\change_deleted 880794617 1453155340
+We believe it
+\change_inserted 880794617 1453155341
+Such models
+\change_unchanged
+ will be able to explain how the different molecular components organize
+ and interact as a function of time and space in performing a cellular function.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "all,mybib,own,wenwei,refs_rohrdanz"
+options "naturemag"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
