@@ -92,23 +92,10 @@ Combined in diverse cellular assemblies that vary with cell cycle, tissue
  Biological processes are governed by the well-defined organization of proteins
  into complexes, and understanding the principles regulating protein interaction
 s remains an important endeavor.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-Major biological processes such as immunity, metabolism, signaling, gene
+ Major biological processes such as immunity, metabolism, signaling, gene
  expression, as well as the building of supramolecular assemblies and molecular
  machines are mediated through protein interactions.
  
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -439,11 +426,16 @@ goodness
 \end_inset
 
 .
- Such a Bayesian approach has two significant advantages: (i) it naturally
- allows to combine together heterogenous experimental data (e.g., different
- sets of observables obtained from different experimental methods), and
- (ii) it associates an uncertainty to the model predictions.
- 
+ This approach has two significant advantages: (i) it naturally allows to
+ combine together heterogenous experimental data (e.g., different sets of
+ observables obtained from different experimental methods), and (ii) it
+ associates an uncertainty to the model predictions.
+ We are working on a rigorous Bayesian formulation that takes into account
+ the statistical uncertainties of both experiment and simulation and can
+ sample different solutions rather than returning one realization of the
+ model.
+ Here we present a simplified version that makes use of a maximum likelihood
+ criterion.
 \end_layout
 
 \begin_layout Standard
@@ -559,7 +551,8 @@ goodness
 \end_inset
 
  of the model in reproducing the data.
- We propose to tackle this problem with the following iterative approach:
+ We are developing a propose to tackle this problem with the following iterative
+ approach:
 \end_layout
 
 \begin_layout Enumerate
