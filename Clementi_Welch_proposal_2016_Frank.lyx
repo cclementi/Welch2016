@@ -148,7 +148,7 @@ key "Alberts1998291,Spirin14102003,Pawson2075,Fuxreiter2014"
  However, any single experiment provides only a glimpse of the complex machinery
  of the cell.
  How can we assemble these pieces of information to a quantitative, mechanistic
- and spatiotemporal model that allows us comprehend and ultimately control
+ and spatiotemporal model that allows us to comprehend and ultimately control
  biological function?
 \end_layout
 
@@ -213,7 +213,7 @@ We propose a modeling and computational approach for the characterization
  and cellular studies.
  The simulation method we propose is computationally efficient due to a
  coarser-than-atomistic resolution, yet accurate by virtue of being optimized
- to obey experimentally reproduce thermodynamic and kinetic measurements.
+ to reproduce thermodynamic and kinetic experimental measurements.
  This approach will enable us to characterize the dynamics, assembly, and
  function of large biological complexes, involving intrinsically disordered
  proteins, large structural transitions, and metastable assemblies.
@@ -574,8 +574,8 @@ Predicted aggregated states of a mutated form of the ribosomal S6 protein
 \begin_inset Formula $_{Alz}$
 \end_inset
 
-), as a function of the average fraction of contacts formed, and the rmsd
- from the experimental crystal structure.
+), as a function of the average fraction of contacts formed, and the root
+ mean square deviation (rmsd) from the experimental crystal structure.
  Red dots correspond to ordered oligomeric structures, black dots to 
 \begin_inset Quotes eld
 \end_inset
@@ -679,7 +679,7 @@ key "matysiak2004optimal"
 
 \end_inset
 
- with the support of the Welch Foundation.
+, with the support of the Welch Foundation.
  This approach defines a molecular models with the constraint to be consistent
  with experimentally measured quantities, as opposed to the “direct” approach
  where models make blind predictions of experimental data.
@@ -716,7 +716,18 @@ New approach: Bayesian inference to combine experiment and simulation
 \noindent
 The original formulation of our method involved the application of free
  energy perturbation theory and a first order Taylor expansion in the parameter
- space of the model Hamiltonian.
+ space of the model Hamiltonian
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "matysiak2004optimal,matysiak2006minimalist"
+
+\end_inset
+
+.
  Here we propose a much more powerful strategy based on Bayesian inference.
  The idea is to measure the 
 \begin_inset Quotes eld
@@ -771,8 +782,8 @@ effective particles
 \end_inset
 
  are used for a simple coarse-grained representations.
- These energy terms contain parameters, such as force constants, bond lenghts,
- effective charges, Lennard-Jones parameters or others.
+ These energy terms contain parameters, such as force constants, bond lengths,
+ effective charges, Lennard-Jones parameters, or others.
  We call the set of parameters 
 \begin_inset Formula $\epsilon$
 \end_inset
