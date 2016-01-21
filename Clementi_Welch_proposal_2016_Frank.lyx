@@ -433,15 +433,8 @@ key "Li2014"
  proteins for synaptic vesicle fusion.
  A set of mutations will be suggested that could affect the stability and
  kinetics of such states, and therefore of the overall exocytosis process.
- These predictions will be directly tested by 
-\emph on
-in vitro
-\emph default
- and 
-\emph on
-in vivo
-\emph default
-: In addition to collecting published structural, thermodynamic, and kinetic
+ These predictions will be directly tested by experiment.
+ In addition to collecting published structural, thermodynamic, and kinetic
  data on the proteins involved (e.g.
  ITC, SPR, FRET), we will collaborate closely with Prof.
  James McNew at Rice University, and Prof.
@@ -688,7 +681,7 @@ key "matysiak2004optimal"
 
  with the support of the Welch Foundation.
  This approach defines a molecular models with the constraint to be consistent
- with experimentally measured quantities, , as opposed to the “direct” approach
+ with experimentally measured quantities, as opposed to the “direct” approach
  where models make blind predictions of experimental data.
  The power of this method was illustrated on the study of the aggregation
  of a mutated form of protein S6 (see Figure 
@@ -847,15 +840,15 @@ We will now sketch an approach to iteratively optimize the parameters
 \end_inset
 
 .
- We are developing a full Bayesian formulation that takes into account the
- statistical uncertainties of both experiment and simulation; we present
- here a particular case: the maximum likelihood solution.
+ Moreover we are developing a full Bayesian formulation that takes into
+ account the statistical uncertainties of both experiment and simulation,
+ while we only focus on the maximum likelihood solution here.
  
 \end_layout
 
 \begin_layout Standard
 \noindent
-In this setting, the set of optimal parameters is found by the following
+In this setting, the optimal set of parameters is found by the following
  iterative approach: 
 \end_layout
 
@@ -1143,11 +1136,12 @@ Scientific relevance and broader impact
 \begin_layout Standard
 \noindent
 Thanks to the technological and methodological advances of the last few
- decades, we now know many key molecular players in many fundamental biological
+ decades, we now know key molecular players in many fundamental biological
  processes.
  However, a comprehensive view of these processes is still lacking.
  Oftentimes, an abundance of structural, thermodynamical, or kinetic measurement
-s is available at least for parts of the components in the system of interest.
+s is available at least for some biomolecules involved or some of their
+ domains.
  The structural information 
 \emph on
 per se
